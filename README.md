@@ -1,6 +1,6 @@
 # eHealth API
 
-eHealth API is a CRUD (Create, Read, Update, Delete) API built with PHP that allows users to store and fetch medical records. It also includes a token-based authentication system for added security.
+eHealth API is a CRUD API built with PHP that allows users to store and fetch medical records. It also includes a token-based authentication system for added security.
 
 ## Features
 
@@ -10,14 +10,14 @@ eHealth API is a CRUD (Create, Read, Update, Delete) API built with PHP that all
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/yourusername/ehealth-api.git`
-2. Create a database for the system
-3. Import the SQL file located at `database/ehealth_api.sql`
-4. Edit the database configuration file located at `app/config/database.php` with your database credentials
-5. Start the system by navigating to the project directory and running `php -S localhost:8000`
+1. Clone the repository: `[git clone https://github.com/yourusername/ehealth-api.git]`
+2. Create a database for the system nammed `national_server`
+3. Import the SQL file located at `SQL_FILE/ehealth_api.sql`
+4. Add some data to `medical record`
 
 ## Usage
 
-1. Generate a new token by making a POST request to the `/api/token` endpoint with your username and password in the request body. The response will contain a new token that you can use to access protected endpoints.
-2. Use the token to access protected endpoints by including it in the `Authorization` header of your requests. The header should look like this:
+1. Generate a new token by making a GET request to the `http://localhost/ehealth_rest_api-main/medical_record/token_builder.php?` endpoint with your `nid`. The response will contain a new `token` and a `token_id` that you can use to access protected data.
+2. Receive your data using GET method and request to the `http://localhost/ehealth_rest_api-main/medical_record/create_token.php?` endpoint with your `nid` and generated `token` and `token_id`. The response will contain data from medical records associated with this nid and token.
+
 
