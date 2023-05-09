@@ -12,8 +12,8 @@ eHealth API is a CRUD API built with PHP that allows users to store and fetch me
 
 1. Clone the repository: `[git clone https://github.com/yourusername/ehealth-api.git]`
 2. Create a database for the system nammed `national_server`
-3. Import the SQL file located at `SQL_FILE/ehealth_api.sql`
-4. Add some data to `medical record`
+3. Import the SQL file to created `national_server` from `SQL_FILE/ehealth_api.sql`
+4. Add some data to `medical_record` table
 
 ## Usage
 
